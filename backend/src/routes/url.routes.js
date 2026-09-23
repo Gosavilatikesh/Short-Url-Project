@@ -56,7 +56,7 @@ router.get("/", async function (req, res) {
 router.delete("/:id", async function (req, res) {
   const { id } = req.params
 
-  const url = await urlModel.findByI(id);
+  const url = await urlModel.findById(id);
   
   if (!url) {
     return res.status(404).json({
